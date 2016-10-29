@@ -1,0 +1,50 @@
+<!doctype html><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,height=device-height,target-densitydpi=device-dpi,user-scalable=yes" />
+    <title>Vodeci - Voice conferencing app in real time.</title>
+    <meta name="description" content="Voice conferencing app in real time. Streamlined user experience without complications." />
+
+<script>
+
+/*
+Browser Language Redirect script- By JavaScript Kit
+For this and over 400+ free scripts, visit http://www.javascriptkit.com
+This notice must stay intact
+*/
+
+//Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
+var langcodes=new Array("es", "en", "default")
+
+//Enter corresponding redirect URLs (last one is for default URL):
+var langredirects=new Array("http://www.vodeci.com/es", "http://www.vodeci.com/en", "http://www.vodeci.com/es")
+
+var languageinfo=navigator.language? navigator.language : navigator.userLanguage
+var gotodefault=1
+
+function redirectpage(dest){
+if (window.location.replace)
+window.location.replace(dest)
+else
+window.location=dest
+}
+
+for (i=0;i<langcodes.length-1;i++){
+if (languageinfo.substr(0,2)==langcodes[i]){
+redirectpage(langredirects[i])
+gotodefault=0
+break
+}
+}
+
+if (gotodefault)
+redirectpage(langredirects[langcodes.length-1])
+
+
+</script>
+
+ 
+ 
+</body>
+
+</html>
