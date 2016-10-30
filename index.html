@@ -2,99 +2,49 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,height=device-height,target-densitydpi=device-dpi,user-scalable=yes" />
-    <link rel="shortcut icon" type="image/x-icon" href="http://vodeci.com/en/static/img/favicon.png">
-    <link rel="stylesheet" href="http://vodeci.com/en/static/css/base.css" type="text/css" />
-    <meta http-equiv="Cache-Control" content="max-age=300"/>
-
-	
     <title>Vodeci - Voice conferencing app in real time.</title>
     <meta name="description" content="Voice conferencing app in real time. Streamlined user experience without complications." />
-    <link rel="stylesheet" href="http://vodeci.com/en/static/css/home_white.css" type="text/css" />
- 
- <!-- Appstore Meta --> 
-    <meta name="apple-itunes-app" content="app-id=XXXXX">
-    
- <!-- Facebook App Meta --> 
-    <meta property="fb:app_id" content="261055770570" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://dl.dropboxusercontent.com/u/55998008/vodeci.com/linkedpreviews/fb_share_photo.jpg"/>
-    <meta property="og:title" content="Voice conferencing app in real time." />
-    <meta property="og:description" content="Voice conferencing app in real time. Streamlined user experience without complications." />
 
-<!-- Twitter Meta -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@vodeci">
-    <meta name="twitter:title" content="Voice conferencing app in real time. Streamlined user experience without complications..">
-    <meta name="twitter:description" content="Voice conferencing app in real time. Streamlined user experience without complications.">
-    <meta name="twitter:domain" content="http://vodeci.com">
-    <meta name="twitter:app:name:iphone" content="Vodeci">
-    <meta name="twitter:app:id:iphone" content="idXXXXXXXX">
+<script>
 
-    <meta property="og:image"  content="https://dl.dropboxusercontent.com/u/55998008/vodeci.com/linkedpreviews/mobile-preview.jpg" />
-    <meta name="twitter:image:src" content="https://dl.dropboxusercontent.com/u/55998008/vodeci.com/linkedpreviews/mobile-preview.jpg" >
+/*
+Browser Language Redirect script- By JavaScript Kit
+For this and over 400+ free scripts, visit http://www.javascriptkit.com
+This notice must stay intact
+*/
 
+//Enter ISO 639-2 letter Language codes to detect (see: http://www.w3.org/WAI/ER/IG/ert/iso639.htm):
+var langcodes=new Array("es", "en", "default")
 
-</head>
+//Enter corresponding redirect URLs (last one is for default URL):
+var langredirects=new Array("http://vodeci.com/es", "http://vodeci.com/en", "http://vodeci.com/es")
 
-<!-- Fonts -->
+var languageinfo=navigator.language? navigator.language : navigator.userLanguage
+var gotodefault=1
 
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
+function redirectpage(dest){
+if (window.location.replace)
+window.location.replace(dest)
+else
+window.location=dest
+}
 
-<body class="home" onload="init();">
+for (i=0;i<langcodes.length-1;i++){
+if (languageinfo.substr(0,2)==langcodes[i]){
+redirectpage(langredirects[i])
+gotodefault=0
+break
+}
+}
 
-<section id="logo"><img src="static/img/home/vodeci-logo.png" alt="Vodeci" width="200" height="70"  />
-</section>
-      
-<section id="intro">
-	<h2>Voice conferencing app in real time.</h2>
-	<p>Streamlined user experience without complications.</p>
-<a id="citiesbutton" href="http://vodeci.com/app/">Beta Access</a>
-</section>
+if (gotodefault)
+redirectpage(langredirects[langcodes.length-1])
 
-<section id="segunda">
-	<h2>Listen and communicate instantly.</h2>
-    <p>A simple user experience without leasing servers, configuring IP, managing rooms or any complication. <b>Conversation is just one click away.</b></p>
-</section>
-
-<section id="tercera">
-	<h2>Speak, coordinate, and vibrate with your buddies.</h2>
-	<p>Mark your presence with your voice and get instant answers.</p>   
-</section>
-
-<section id="cuarta">
-	<h2>Multiplatform.</h2>
-	<p>Runs on devices of various sizes, Android, iPhone, Mac & PC.</p>
-<a id="citiesbutton" href="http://vodeci.com/app/">Beta Access</a>
-</section>
-
-
-<div id="footer">
-<a href="https://facebook.com/vodeci" title="Talk to nosotros">Facebook </a>
-<a href="../en/why">Why Subscription?</a>
-<a href="../en/privacy/" title="Terms and Privacy">Terms and Privacy</a>
-<span>&copy; vodeci</span>
-        
-
-</div>
-
-
-<!-- Google Analytics -->
 
 </script>
 
-	<script type="text/javascript">
-	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', 'UA-69002724-1']);
-	  _gaq.push(['_setDomainName', 'vodeci.com']);
-	  _gaq.push(['_trackPageview']);
-
-	  (function() {
-	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-	  })();
-	</script>
-
+ 
+ 
 </body>
+
 </html>
